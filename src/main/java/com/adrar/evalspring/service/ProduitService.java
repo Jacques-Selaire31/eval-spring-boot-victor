@@ -19,7 +19,7 @@ public class ProduitService {
 
     //Ajouter un produit
     public Produit addProduit(Produit produit){
-        if (produitRepository.existsByName(produit.getNom())) {
+        if (produitRepository.existsByNom(produit.getNom())) {
             throw new ProduitAllReadyExistsException("Le produit avec le nom suivant : " + produit.getNom() + " existe déjà");
         }
         return produitRepository.save(produit);

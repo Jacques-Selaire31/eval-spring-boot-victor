@@ -5,5 +5,5 @@ import com.adrar.evalspring.entity.Produit;
 
 public interface ProduitRepository extends CrudRepository<Produit, Integer>
 {
-    public boolean existsByName(String nom);
+    public boolean existsByNom(String nom);
 }
