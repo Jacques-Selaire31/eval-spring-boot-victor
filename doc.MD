@@ -46,6 +46,8 @@ response :
     "Error": "Le produit avec le nom suivant : Souris existe déjà"
 }
 
+
+2/ Afficher tous les produits 
 GET http://localhost:9000/produits
 
 response : 
