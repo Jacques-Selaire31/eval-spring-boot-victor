@@ -15,7 +15,7 @@ public class Produit {
     private Integer id;
 
     @Column(name ="nom", nullable = false)
-    @Length(min = 2, message = "Le nom du produit doit contenir au moins 2 charactères")
+    @Length(min = 2, message = "Le nom du produit doit contenir au moins 2 caractères")
     @NotBlank(message = "Le titre ne peut pas être vide")
     private String nom;
 
@@ -23,4 +23,8 @@ public class Produit {
     @NotBlank(message = "Le prix ne peut pas être vide")
     @Positive(message = "Le prix ne peut pas être négatif")
     private Double prix;
+
+    @ManyToOne
+    @JoinColumn(name = "categorie_id", nullable = false)
+    private Categorie categorie;
 }

@@ -1,4 +1,10 @@
 package com.adrar.evalspring.exception;
 
-public class ProduitAllReadyExistsException {
+import com.adrar.evalspring.entity.Produit;
+
+public class ProduitAllReadyExistsException extends RuntimeException {
+
+    public ProduitAllReadyExistsException(String message) {
+            super(message);
+        }
 }
